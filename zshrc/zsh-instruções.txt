@@ -1,0 +1,53 @@
+para substituir o bash, no primeiro uso do zsh, rodar:
+	$ $(which zsh)
+ou
+	$ chsh -s $(which zsh)
+
+opção (2)
+
+usar 'sudo' ou 'sudo su' para a configuração do root.
+
+*****************
+configurando um shell:
+	zsh:
+	$ chsh -s /bin/zsh
+
+	bash:
+	$ chsh -s /bin/bash
+
+para o root:
+	$ sudo chsh -s /bin/zsh root
+
+	$ sudo chsh -s /bin/bash root
+
+*****************
+ver o shell em uso:
+	$ echo $0
+ou
+	$ echo $SHELL
+
+*****************
+- comentar a linha '#prompt adam1' do '.zshrc'
+
+- copiar o conteúdo do arquivo 'zshrc_config.txt' para o arquivo .zshrc para ativar o prompt personalizado, autosuggestions e cores do zsh.
+
+*****************
+Troubleshooting:
+
+Do you have zsh installed? 
+	$ dpkg -l zsh
+
+Is Zsh a valid login shell?
+	$ grep zsh /etc/shells
+
+Is your shell set to zsh? Last field of 
+	$ grep $USER /etc/passwd
+
+Open /etc/passwd:
+	$ sudo nano /etc/passwd
+
+Find the line with your username:
+	username:x:1634231:100:Your Name:/home/username:/bin/bash
+
+and replace bash with zsh:
+	username:x:1634231:100:Your Name:/home/username:/bin/zsh

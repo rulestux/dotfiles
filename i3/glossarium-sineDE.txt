@@ -1,0 +1,53 @@
+alien alsa-utils arandr arc-theme bastet blackbird-gtk-theme bmon breeze-icon-theme btop htop ccze build-essential calcurse cmatrix cmus compton darkcold-gtk-theme elinks dosfstools ntfs-3g xfsprogs btrfs-progs feh fzf git j4-dmenu-desktop jp2a l3afpad links2 locate lxappearance lxpolkit moreutils mpv ffmpeg yt-dlp neofetch plocate screenfetch speedometer neovim vim ncal ncdu nitrogen nmon nm-tray nnn progress qt5ct qt5-style-kvantum-themes ranger w3m rofi s-tui tmux tree tty-clock udiskie xfce4-terminal xdotool xclip diodon maim volumeicon-alsa wmctrl zathura
+
+alien - deb converter
+alsa-utils - terminal audio mixer
+arandr - screen resolution manager
+bastet - tetris game
+bmon -  monitoring and debugging tool 
+build-essential - compilers
+ccze - colorize log files
+compton - X11 composer for transparency
+dosfstools ntfs-3g xfsprogs btrfs-progs - for many file systems
+feh - wallpaper manager
+fzf - finder
+j4-dmenu-desktop - dmenu
+jp2a - utility for converting JPG images to ASCII art
+locate | plocate - fast and efficient alternative to the traditional locate command in Linux, designed to provide quicker search results on a smaller index
+logo-ls - icons on terminal (.deb from git page)
+lxappearance - for appearance configurations
+lxpolkit - for root log GUI
+moreutils -  a collection of additional Unix utilities for Linux and other Unix-like systems, designed to complement the GNU core utilities
+ 	- chronic: runs a command quietly unless it fails
+ 	- combine: combine the lines in two files using boolean operations
+ 	- errno: look up errno names and descriptions
+ 	- ifdata: get network interface info without parsing ifconfig output
+ 	- ifne: run a program if the standard input is not empty
+ 	- isutf8: check if a file or standard input is utf-8
+ 	- lckdo: execute a program with a lock held
+ 	- mispipe: pipe two commands, returning the exit status of the first
+ 	- parallel: run multiple jobs at once
+ 	- pee: tee standard input to pipes
+ 	- sponge: soak up standard input and write to a file
+ 	- ts: timestamp standard input
+ 	- vidir: edit a directory in your text editor
+ 	- vipe: insert a text editor into a pipe
+ 	- zrun: automatically uncompress arguments to command
+mpv - for videos
+ncdu - disk usage monitor
+nitrogen - wallpaper manager with graphics
+nmon - system monitoring
+nm-tray - for wi-fi configurations
+nnn - terminal file manager
+progress - shows progress for cp mv etc.
+qt5ct - for appearance configurations
+ranger - terminal file manager
+speedometer - tool used to measure and display the rate of data across a network connection or data being stored in a file
+w3m - terminal browser
+rofi - graphic program starter
+tree - tool used to display the directory structure in a tree-like format
+udiskie - removable media loader
+xclip (diodon) maim - clipboard tools
+xdotool - for key configurations
+wmctrl - for X window manager
+zathura - pdf reader

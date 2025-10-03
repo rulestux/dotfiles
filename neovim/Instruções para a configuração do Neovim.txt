@@ -1,0 +1,167 @@
+******************************************************
+NEOVIM:
+******************************************************
+
+1. init.vim
+este é o arquivo com as configurações do neovim.
+copiar diretório 'nvim', de 'diretorios', para o diretório '~/.config/'.
+
+2. instalar plug.vim online:
+
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+3. instalar plug.vim offline:
+
+	copiar diretório 'site' — o qual contém o script do plug.vim —, de 'diretórios', para o diretório
+ 		'~/.local/share/nvim/'.
+
+	diretório de plugins:
+		'~/.vim/plugged'
+		copiar diretório '.vim', de 'diretorios', para o diretório '~/'.
+			
+		ver informações no final desse arquivo a respeito dos plugins.
+
+******************************************************
+VIM:
+******************************************************
+
+- copiar o arquivo 'init.vim' para a pasta '~/' e renomeá-lo para '.vimrc': '~/.vimrc'.
+- copiar o arquivo 'plug.vim' para '~/.vim/autoload/plug.vim' ou copiar diretório '.vim' de estrutura de diretórios para '~/'.
+	diretório de plugins:
+		'~/.vim/plugged' 
+
+- caso o 'nvim' estiver abrindo quando o 'vim' é chamado, usar:
+	$ sudo update-alternatives --config vim
+		selecionar a opção '2'.
+
+******************************************************
+CÓDIGOS LUA
+******************************************************
+
+- para inserir códigos lua em arquivo '.vim':
+
+lua <<EOF
+ print("Olá, usuário! Seja bem-vindo ao Neovim!")
+EOF
+
+-para inserir códigos vim em arquivos '.lua':
+
+vim.cmd([[ set guicursor= ]])
+
+
+******************************************************
+PLUGINS
+******************************************************
+
+*****************************
+Language Servers e outras dependências
+- para que os servidores de linguagem habilitados no init.vim funcionem, é preciso instalar os pacotes: 
+	ccls clangd efm-langserver gopls python3-pylsp
+
+- dependências de outros plugins:
+	CoC: npm nodejs python3-pip
+	YCM: build-essential cmake vim-nox python3-dev
+		ver mais na lista abaixo de acordo com o linguagem a ser habilitada.
+
+*****************************
+Sonokai theme
+'sainnhe/sonokai'
+
+- para usar os temas padrões do vim, :color ou :colorscheme + TAB; usar 'habamax' ou 'desert' para o vim;
+- para habilitar qualquer opção de tema, substituir 'sonokai' em 'colorscheme sonokai';
+- para outros estilos do 'sonokai' ('default' 'atlantis' 'andromeda' 'shusia' 'maia' 'espresso'), substituir 'default' em 'let g:sonokai_style = 'default';
+- note-se que o estilo 'default' teve as colors de background alteradas no arquivo '~/.vim/plugged/sonokai/autoload/sonokai.vim' para tons mais escuros, inspirados no carbonfox.
+
+*****************************
+DevIcons to use NerdFonts
+'ryanoasis/vim-devicons'
+
+*****************************
+Airline infobar plugin
+'vim-airline/vim-airline'
+'vim-airline/vim-airline-themes'
+
+- note-se que o tema 'simple' teve as colors de background alteradas no arquivo '~/.vim/plugged/vim-airline-themes/autoload/airline/themes/simple.vim' para tons mais harmônicos, inspirados no carbonfox.
+
+*****************************
+NerdTree file explorer plugin
+'preservim/nerdtree'
+'tiagofumo/vim-nerdtree-syntax-highlight'
+'Xuyuanp/nerdtree-git-plugin'
+
+*****************************
+Polyglot highlighting syntaxis
+'sheerun/vim-polyglot'
+
+*****************************
+IndentLine thin vertical indent line
+'Yggdroot/indentLine'
+
+*****************************
+AutoPairs autocomplete mark pairs plugin
+'jiangmiao/auto-pairs'
+
+*****************************
+ALE linters and fixers plugin
+'dense-analysis/ale'
+
+*****************************
+vim-snippets
+'honza/vim-snippets'
+'ervandew/supertab'
+
+*****************************
+PHP Laravel environment
+'noahfrederick/vim-laravel'
+'noahfrederick/vim-composer'
+'tpope/vim-dispatch'
+'tpope/vim-projectionist'
+
+*****************************
+Vimspector Debugger Environment
+'puremourning/vimspector'
+
+*****************************
+DAP Debugger Environment
+'mfussenegger/nvim-dap'
+'mfussenegger/nvim-jdtls'
+'mfussenegger/nvim-dap-python'
+'rcarriga/nvim-dap-ui'
+'nvim-neotest/nvim-nio'
+'theHamsta/nvim-dap-virtual-text'
+
+- para utilizar keymappings de './dotfiles/init-DAP.vim', comentar aqueles configurados para o Vimspector.
+
+*****************************
+JavaComplete2 autocomplete for accessors
+'artur-shaik/vim-javacomplete2'
+
+- mappings originais desabilitados no 'initi.vim' e alterados por mappings sem conflito com outros;
+- autocomplete configurado exclusivamente para 'getters', 'setters' e 'constructors (builders)'.
+
+*****************************
+YouCompleteMe autocomplete
+'ycm-core/YouCompleteMe'
+'SirVer/ultisnips'
+
+- o YCM é ideal para o vim;
+- instalar: build-essential cmake vim-nox python3-dev;
+- adicionar o conteúdo do arquivo './dotfiles/init-YCM.vim' às respectivas seções do arquivo '~/.config/nvim/init.vim';
+- no diretório ~/.vim/plugged/YouCompleteMe, executar 'python3 install.py' para instalar o ycm;
+- ou adicionar ao final do comando '--all' caso tenha instalado todos a seguir, ou individualmente: 
+	para família C (instalar gcc g++): 			'--clangd-completer'
+	para C# (instalar mono-complete): 			'--cs-completer' 
+	para Go (instalar golang)				'--go-completer' 
+	para JS (instalar npm nodejs): 				'--ts-completer'
+	para Rust (instalar rustc): 				'--rust-completer' 
+	para Java (instalar openjdk-17-jdk openjdk-17-jre): 	'--java-completer'
+
+*****************************
+CoC (Conquer of Completion)
+'neoclide/coc.nvim'
+
+- o CoC é ideal para o nvim newer;
+- para utilizar o CoC, adicionar o conteúdo do arquivo './dotfiles/init-CoC.vim' às respectivas seções do arquivo '~/.config/nvim/init.vim'.
+- para utilizar plugins internos do CoC, copiar diretório '.diretorios/coc/' para '~/.config'.
+- o CoC depende da instalação dos pacotes: npm nodejs python3-pip. 

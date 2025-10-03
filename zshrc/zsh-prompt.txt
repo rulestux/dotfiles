@@ -1,0 +1,12 @@
+
+# PARROT INSPIRED
+PROMPT=$'%F{%(#.#1010FF.#1010FF)}╭─(%B%F{%(#.red.#6EADA3)}%n'$prompt_symbol$'%m%b%F{%(#.#1010FF.#1010FF)})─[%B%F{#aaaaaa}%(6~.%-1~/…/%4~.%5~)%b%F{%(#.#1010FF.#1010FF)}]\n╰─[%B%F{#aaaaaa}%T%b%F{%(#.#1010FF.#1010FF)}]%B%(#.%F{red}#.%F{#006A00}$)%b%F{reset} '
+;;
+
+# with NerdFont folder
+PROMPT=$'%B%F{%(#.blue.blue)}╭─(%B%F{%(#.red.#6EADA3)}%n'$prompt_symbol$'%m%B%F{%(#.blue.blue)})─[%B%F{#958401} %B%F{#aaaaaa}%(4~.%-1~/…/%2~.%3~)%B%F{%(#.blue.blue)}]\n╰─[%B%F{#aaaaaa}%T%B%F{%(#.blue.blue)}]%B%(#.%F{red}#.%F{#006A00}$)%b%F{reset} '
+;;
+
+# with NerdFont folder without complete path
+PROMPT=$'%B%F{%(#.blue.blue)}╭──(%B%F{%(#.red.#6EADA3)}%n'$prompt_symbol$'%m%B%F{%(#.blue.blue)})─[%B%F{#958401} %B%F{#aaaaaa}%1~%B%F{%(#.blue.blue)}]\n╰─[%B%F{#aaaaaa}%T%B%F{%(#.blue.blue)}]%B%(#.%F{red}#.%F{#006A00}$)%b%F{reset} '
+;;

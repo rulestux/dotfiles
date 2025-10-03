@@ -1,0 +1,1 @@
+~/.configo/picom/picom.conf

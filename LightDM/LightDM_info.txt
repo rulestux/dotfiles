@@ -1,0 +1,3 @@
+
+descomentada a linha:
+	greeter-hide-users=false

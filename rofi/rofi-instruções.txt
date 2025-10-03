@@ -1,0 +1,3 @@
+copiar temas para /usr/share/rofi/themes/
+
+sudo cp {i3-Dark.rasi,i3-Dark-Black.rasi,i3-Dark-Blue.rasi,i3-Dark-Green.rasi} /usr/share/rofi/themes/

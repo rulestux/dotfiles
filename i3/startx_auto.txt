@@ -1,0 +1,5 @@
+
+# Automatically start i3wm on first login in TTY
+if [ -z "$DISPLAY" ] && [ "$(fgconsole 2>/dev/null)" -eq 1 ]; then
+	exec startx -- -keeptty
+fi

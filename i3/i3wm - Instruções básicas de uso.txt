@@ -1,0 +1,87 @@
+****************************************************
+INSTALAÇÃO MÍNIMA PARA CONFIGURAÇÃO
+(inclusive com DE e DM):
+arandr compton feh lxappearance nitrogen ranger rofi udiskie volumeicon-alsa xfce4-terminal xdotool xorg zsh-autosuggestions zsh-doc zsh-syntax-highlighting
+
+RECOMENDADOS PARA USO SEM DE
+arc-theme blackbird-gtk-theme breeze-icon-theme build-essential darkcold-gtk-theme dosfstools ntfs-3g xfsprogs btrfs-progs j4-dmenu-desktop l3afpad moreutils nm-tray qt5ct qt5-style-kvantum-themes tmux tuigreet wmctrl zsh
+
+aplicativos CLI de 'Apps para Terminal'
+
+PARA ÁREA DE TRANSFERÊNCIA (CLIPBOARD)
+maim xclip
+
+diodon somente se um histórico da área de transferência for necessário. descomentar comando de inicialização em '~/.config/i3/config'.
+
+PARA LOGAR COMO ROOT ATRAVÉS DE GUI
+lxpolkit
+
+****************************************************
+SUBSTITUIR ARQUIVOS:
+em caso de instalação offline, copiar «sources.list» de «./dotfiles/» para «/etc/apt/» [«$ sudo apt update» para atualizar cache do repositório].
+
+para personalizar o login do TTY, substituir o arquivo «/etc/issue» pelo arquivo «./issue_i3_issue», usando o nome do arquivo original.
+
+****************************************************
+INICIAR O i3:
+
+	$ startx
+
+sair com «Control+Shift+e»
+
+IMPORTANTE: fazer uma inicialização manual com «startx» pela primeira vez para iniciarem-se os arquivos de configuração.
+
+para iniciar o i3 automaticamente no próximo acesso, adicionar as seguintes linhas — também disponíveis no arquivo «./dotfiles/startx_auto.txt» — ao final do arquivo «~/.profile» (para ser lido apenas na primeira sessão do TTY) ou do arquivo «~/.bashrc» ou «~/.zshrc»:
+
+# Automatically start i3wm on first login in TTY
+if [ -z "$DISPLAY" ] && [ "$(fgconsole 2>/dev/null)" -eq 1 ]; then
+    exec startx -- -keeptty
+fi
+
+ou concatenar «startx_auto.txt» para o final de «~/.profile».
+
+****************************************************
+INICIAR O i3 COM DE PELO LIGHTDM
+confirmar a existência do arquivo:
+	/usr/share/xsessions/i3.desktop
+	ou
+	/usr/share/wayland-sessions/i3.desktop
+
+para qualquer conficuração do LightDM:
+	/etc/lightdm/lightdm.conf
+
+****************************************************
+SUBSTITUIR ARQUIVOS:
+«config» de «./dotfiles/» para «~/.config/i3/» [personaliza o i3].
+
+copiar {i3-Dark.rasi,i3-Dark-Blue.rasi,i3-Dark-Gray.rasi,i3-Dark-Green.rasi} para «/usr/share/rofi/themes/» [temas pessoais para o rofi]
+
+plugin de ícones do Ranger:
+copiar o rc.conf e o diretório plugins para ~/.config/ranger;
+
+****************************************************
+INSTALAR FONTES (útil para as NerdFonts do nvim e do logo-ls):
+pasta de fontes:		/usr/share/fonts/
+instalação das fontes:		$ sudo fc-cache -fv
+configurar NerdFont no terminal.
+
+****************************************************
+ATIVAR LOGO-LS:
+para ativar o logo-ls, instalar o arquivo «logo-ls_amd64.deb» em «./debian-i3wm/logo-ls/» e
+concatenar o arquivo «logo-ls_alias_to_.bashrc.txt» para o final de «~/.bashrc» ou «~/.zshrc» etc..
+
+****************************************************
+TECLAS BÁSICAS DE ATALHO [KEYBIDINGS]:
+para abrir um terminal: «Super+Enter».
+para encerrar qualquer janela: «Super+Shift+q» por padrão.
+para buscar aplicações: «Super+d», abrindo o dmenu clássico.
+alterar atalhos no arquivo «~/.config/i3/config» ou substituir pelo arquivo «./dotfiles/config» personalizado, conforme orientação acima.
+
+****************************************************
+PAPEL DE PAREDE: 
+entrar no «nitrogen» e selecionar a pasta com Wallpapers.
+
+****************************************************
+PERSONALIZAÇÃO DO PROMPT PS1 COM POWERLINE E NERDFONT
+concatenar o conteúdo do arquivo «./dotfiles/ps1-code.txt» ao final do arquivo «~/.bashrc».
+detalhes sobre como personalizar em «./dotfiles/Prompt Creating.txt».

@@ -1,0 +1,16 @@
+_______________________________________
+copiar 'rc.conf' e 'plugins/' para:
+~/.config/ranger/
+
+as alterações no arquivo original foram: 
+	- configuração de exibição de arquivos ocultos, colocada como permanente. 
+		- pode ser modificada com o comando «zh». 
+
+	- habilitação dos DevIcons, com o uso de ícones das NerdFonts.
+		- basta copiar o rc.conf e o diretório plugins para ~/.config/ranger
+
+	- comentados comandos em erro: 	
+		'confirm_on_trash'
+		'sixel_dithering'
+		'filter_dead_tabs_on_startup'
+		'binary_size_prefix'
