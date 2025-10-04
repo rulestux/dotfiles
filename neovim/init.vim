@@ -57,11 +57,12 @@ nmap <leader>w :w<CR>				" fast save (write)
 nmap <leader>z :u<CR> 				" undo; redo: Control+R
 nmap <leader><Tab> :bnext<CR>		" switch to next buffer
 nmap <leader>b :bprevious<CR>		" switch to previous buffer
-nmap <leader>x :bdelete<CR> 		" delete buffer
+nmap <leader>0 :bdelete<CR> 		" delete buffer
 nmap <leader>- :split<CR> 			" split horizontally
 nmap <leader>/ :vsplit<CR> 			" split vertically
+nmap <leader>x <C-W>q				" close current pane
 
-" move split panes to left/bottom/top/right
+" move panes to left/bottom/top/right
 nnoremap <A-Left> <C-W>H
 nnoremap <A-Down> <C-W>J
 nnoremap <A-Up> <C-W>K
@@ -83,7 +84,7 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" resize pane <leader>
+" resize pane
 nnoremap <leader><Left> :vertical resize -3<CR>			" resize window -3 columns
 nnoremap <leader><Down> :resize +2<CR>					" resize window +2 lines
 nnoremap <leader><Up> :resize -2<CR>					" resize window -2 lines
