@@ -100,6 +100,8 @@ inoremap <A-j> <Esc>:m .+1<CR>==gi
 inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
+vnoremap <A-Down> :m '>+1<CR>gv=gv
+vnoremap <A-Up> :m '<-2<CR>gv=gv
 
 " indent line or visually selected block
 vnoremap <Tab> >gv
@@ -359,9 +361,9 @@ let g:JavaComplete_EnableDefaultMappings = 0
 """""""""""""""""""""""""""""""""""""""""""""""
 " Custom mappings
 
-nmap <leader>vI <Plug>(JavaComplete-Imports-AddMissing)
+nmap <leader>vi <Plug>(JavaComplete-Imports-AddMissing)
 nmap <leader>vr <Plug>(JavaComplete-Imports-RemoveUnused)
-nmap <leader>vi <Plug>(JavaComplete-Imports-AddSmart)
+nmap <leader>vI <Plug>(JavaComplete-Imports-AddSmart)
 nmap <leader>vii <Plug>(JavaComplete-Imports-Add)
 
 nmap <leader>vm <Plug>(JavaComplete-Generate-AbstractMethods)
