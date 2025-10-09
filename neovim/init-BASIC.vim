@@ -54,7 +54,6 @@ filetype indent on			" Load the indent file for the file type, if any
 let mapleader = 'ç'					" set ç as leader
 nmap <leader>q :quit<CR>			" fast quit		
 nmap <leader>w :w<CR>				" fast save (write)
-nmap <leader>z :u<CR> 				" undo; redo: Control+R
 nmap <leader><Tab> :bnext<CR>		" switch to next buffer
 nmap <leader>b :bprevious<CR>		" switch to previous buffer
 nmap <leader>0 :bdelete<CR> 		" delete buffer
