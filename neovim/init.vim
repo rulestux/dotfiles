@@ -161,25 +161,11 @@ Plug 'ervandew/supertab'
 " Vimspector Debugger Environment
 Plug 'puremourning/vimspector'
 
-" DAP Debugger Environment
-Plug 'mfussenegger/nvim-dap'
-Plug 'mfussenegger/nvim-jdtls'
-Plug 'mfussenegger/nvim-dap-python'
-Plug 'rcarriga/nvim-dap-ui'
-Plug 'nvim-neotest/nvim-nio'
-Plug 'theHamsta/nvim-dap-virtual-text'
-
-" CoC autocomplete plugin
-Plug 'neoclide/coc.nvim' , { 'branch' : 'release' }
-
 " Java autocomplete for accessors
 Plug 'artur-shaik/vim-javacomplete2'
 
-" PHP Laravel environment
-Plug 'noahfrederick/vim-laravel'
-Plug 'noahfrederick/vim-composer'
-Plug 'tpope/vim-dispatch'
-Plug 'tpope/vim-projectionist'
+" CoC autocomplete plugin
+Plug 'neoclide/coc.nvim' , { 'branch' : 'release' }
 
 call plug#end()
 

@@ -112,26 +112,8 @@ vim-snippets
 'ervandew/supertab'
 
 *****************************
-PHP Laravel environment
-'noahfrederick/vim-laravel'
-'noahfrederick/vim-composer'
-'tpope/vim-dispatch'
-'tpope/vim-projectionist'
-
-*****************************
 Vimspector Debugger Environment
 'puremourning/vimspector'
-
-*****************************
-DAP Debugger Environment
-'mfussenegger/nvim-dap'
-'mfussenegger/nvim-jdtls'
-'mfussenegger/nvim-dap-python'
-'rcarriga/nvim-dap-ui'
-'nvim-neotest/nvim-nio'
-'theHamsta/nvim-dap-virtual-text'
-
-- para utilizar keymappings de './dotfiles/init-DAP.vim', comentar aqueles configurados para o Vimspector.
 
 *****************************
 JavaComplete2 autocomplete for accessors
